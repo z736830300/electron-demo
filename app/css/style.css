@@ -1,0 +1,136 @@
+html, body, p, ul {
+    -webkit-app-region: drag;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+ul {
+    list-style: none
+}
+.clearfix {
+    overflow: hidden;
+    zoom: 1;
+}
+.container {
+    margin: 0 auto;
+    width: 368px;
+    height: 700px;
+    background-color: #1DCCEB;
+}
+.container header {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}
+.container .settings {
+    background:url('../img/settings.png') no-repeat;
+}
+.container .close {
+    background:url('../img/close.png') no-repeat;
+}
+.container .settings,
+.container .close {
+    padding: 0 5px      ;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-position: center;
+    -webkit-app-region: no-drag;
+}
+main .speaker {
+    margin: 0 auto;
+    width: 274px;
+    height: 194px;
+    background: url('../img/speaker.png') no-repeat center;
+    background-size: contain;
+}
+main .logo {
+    float: right;
+    padding: 20px 0;
+    margin-right: 20px;
+    width: 195px;
+    height: 31px;
+    background: url('../img/logo.png') no-repeat center;
+    background-size: contain;
+}
+main .btns {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .btns li {
+    width: 25%;
+    height: 80px;
+}
+.btns li .sound-btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #0C7CA2;
+    box-shadow:0px 4px #044D7F;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+.btns li .sound-btn:hover {
+    top: 2px;
+    box-shadow:0px 2px #044D7F;
+}
+.btns li .sound-btn:active {
+    top: 4px;
+    box-shadow: none;
+}
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    display: none
+}
+.bg .modal {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 180px;
+    height: 200px;
+    background-color: #044D7F
+}
+.bg .modal .caption {
+    padding-left: 10px;
+    height: 44px;
+    line-height: 44px;
+    font-weight: 900;
+    color: #fff;
+}
+.bg .modal .close-settings {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background:url('../img/close.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    -webkit-app-region: no-drag;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
